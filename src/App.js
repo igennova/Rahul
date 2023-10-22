@@ -1,25 +1,29 @@
 import logo from './logo.svg';
 import './App.css';
+import Sidebar1 from './Components/Side bar';
+import { Route,Routes } from 'react-router';
+import { Fragment } from 'react';
+import Tender from './Components/Tender';
+import Home from './Components/Home';
+import NavigationBar from './Components/navbar';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  return(
+    <Fragment>
+      
+    
+  
+    <Routes>
+      <Route path='/tender' element={<Tender/>}></Route>
+      { <Route path='/' element={<Home/>}></Route> }
+     
+    </Routes>
+ 
+</Fragment>
+  
+  
+  )
+    
 }
 
 export default App;
